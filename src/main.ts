@@ -5,20 +5,21 @@ import { store, key } from '/@/store/index'
 import SvgIcon from '/@cp/svg-icon.vue'
 import vImg from './directives/v-img'
 
-import "tailwindcss/tailwind.css"
+import 'tailwindcss/tailwind.css'
 import '/@style/global.css'
 import '/@style/transition.css'
 
-const app = createApp(App);
+const app = createApp(App)
 
-app.use(store, key)
+app
+  .use(store, key)
   .use(router)
   .directive('img', vImg)
   .component('svg-icon', SvgIcon)
-  .mount('#app');
+  .mount('#app')
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').then(registration => {
-    
-  });
+  navigator.serviceWorker.register('/sw.js').then((registration) => {
+    console.log(registration)
+  })
 }

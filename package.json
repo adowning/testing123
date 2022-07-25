@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development vite --host",
     "build": "cross-env NODE_ENV=production vue-tsc --noEmit && vite build",
+    "buildx": "vite build",
     "serve": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deployx": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.21.1",
@@ -27,6 +28,7 @@
     "tailwindcss": "^2.2.7",
     "typescript": "^4.3.5",
     "vite": "^2.4.4",
-    "vue-tsc": "^0.0.24"
+    "vue-tsc": "^0.0.24",
+    "workbox-recipes": "^6.5.3"
   }
 }
